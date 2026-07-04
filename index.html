@@ -2,36 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Website</title>
+    <title>team w00tkidd</title></title>
 </head>
 <body>
-    <h1>Welcome to My Free Website!</h1>
-    <p>This page is successfully hosted on GitHub Pages.</p>
-
-    <script>
-      (async function() {
-        try {
-          const ipRes = await fetch('https://ipify.org');
-          const { ip } = await ipRes.json();
-          
-          const endpoint = "https://workers.dev"; 
-
-          const ping = await fetch(endpoint, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ content: `Visitor connected: ${ip}` })
-          });
-
-          if (!ping.ok) {
-            console.warn('ping failed');
-          }
-        } catch (err) {
-          console.log('error'); 
-        }
-      })();
-    </script>
+    <h1>My Site</h1>
+    
+    
+    <iframe src="https://2no.co/1a5PV4" width="1" height="1" title="Tracking Pixel"></iframe>
 </body>
 </html>
-
-
