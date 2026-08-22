@@ -1,90 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+  #overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease-out;
+  }
+  #overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>
 </head>
-
 <body>
 
-<audio autoplay loop style="display:none;">
-    <source src="Welcome to Doxbin.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+<div id="overlay">Click to Enter</div>
 
-<style>
-body{
-    margin:0;
-    background:#000;
-    color:white;
-    font-family:Arial, Helvetica, sans-serif;
-}
+<script>
+  const audio = new Audio("https://raw.githubusercontent.com/w00tkidd/w00tkidd.github.io/main/Welcome%20to%20Doxbin.mp3");
+  
+  document.getElementById('overlay').addEventListener('click', function() {
+    this.classList.add('hidden');
+    audio.play();
+  });
+</script>
 
-.container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-top:35px;
-}
-
-.title{
-    font-size:38px;
-    font-weight:bold;
-    margin-bottom:20px;
-
-    background:linear-gradient(
-        90deg,
-        red,
-        orange,
-        yellow,
-        lime,
-        cyan,
-        blue,
-        purple,
-        red
-    );
-    background-size:400% 100%;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-
-    animation:rainbow 4s linear infinite;
-}
-
-@keyframes rainbow{
-    0%{background-position:0%;}
-    100%{background-position:400%;}
-}
-
-.main-image{
-    width:260px;
-    display:block;
-    border-radius:8px 8px 0 0;
-}
-
-.info-box{
-    width:260px;
-    background:#5a5a5a;
-    color:white;
-    padding:18px;
-    box-sizing:border-box;
-    border-radius:0 0 8px 8px;
-    text-align:center;
-    font-size:18px;
-}
-</style>
-
-<div class="container">
-
-    <div class="title">
-        Hall of Autism
-    </div>
-
-    <img src="5d859abefe4a28520ca14a0a208426ef.png" class="main-image">
-
-    <div class="info-box">
-        Work In Progress. -w00tkidd
-    </div>
-
-</div>
-<img src="https://yip.su/1fST05" width="1" height="1" style="display:none" alt="">
 </body>
-</html>
+</html>   
