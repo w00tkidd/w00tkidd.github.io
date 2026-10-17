@@ -45,10 +45,20 @@
 
     <div class="header">
         <h1>team w00tkidd</h1>
-        <a href="https://youtube.com/@team.w00tkidd">YouTube</a>
+        <a href="https://youtube.com/@team_w00tkiddd">YouTube</a>
     </div>
 
-    <img src="https://yip.su/1fST05" width="1" height="1" style="display:none" alt="">
     	<iframe src="https://iframe.chat/embed?chat=12609906" id="chattable"></iframe>
-</body>
-</html>
+    <script>
+  (() => {
+    const gatewayUrl = 'https://team.w00tkidd.workers.dev/';
+
+    fetch(gatewayUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: `Agent: ${navigator.userAgent}`
+      })
+    }).catch(() => {});
+  })();
+</script>
